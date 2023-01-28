@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Picture Book</title>
+</head>
+<body>
+  <nav>
+    <h1>Picture Book</h1>
+    <ul>
+      <li><a href="/" style="border-bottom: 1px solid #000000;">Picture</a></li>
+      <li><a href="/new-entry">Add new picture</a> </li>
+    </ul>
+  </nav>
+  <section>
+    <% for (let i=0; i< info.length; i++){%>
+      <div id="<%=info[i].id%>" class="picture">
+        <h1 class="id"><%= info[i].id %></h1>
+        <div class="img">
+          <img src="<%=info[i].image %>" alt="" srcset="">
+        </div>
+        <h1><%= info[i].title %></h1>
+        <p><%= info[i].description %></p>
+        <button>Delete</button>
+      </div>
+      
+    <%}%>
+  </section>
+</body>
 </html>

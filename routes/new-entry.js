@@ -1,9 +1,18 @@
 var express = require('express');
+const { route } = require('.');
 var router = express.Router();
 
-/* GET users listing. */
+/* render*/
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('newentry')
+  
 });
 
+/* FORM */
+router.post('/',(req, res, next)=>{
+  //
+  const {title, author, image, description}= req.body
+  console.log({title, author, image, description})
+  res.redirect('/new-entry')
+})
 module.exports = router;

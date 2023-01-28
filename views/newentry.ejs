@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Add new picture</title>
+</head>
+<body>
+    <nav>
+        <h1>Picture Book</h1>
+        <ul>
+            <li><a href="/" >Picture</a></li>
+            <li><a href="/new-entry" style="border-bottom: 1px solid #000000;">Add new picture</a> </li>
+        </ul>
+    </nav>
+    <section>
+        <form action="/new-entry" method="POST">
+            <h1>New Picture</h1>
+            <p>Title</p>
+            <input type="text" name="title" placeholder="Entry a New Title" required>
+            <p>Author</p>
+            <input type="text" name="author" placeholder="Author" required>
+            <p>Image</p>
+            <input type="text" name="image" placeholder="http://website.com" required>
+            <p>Description</p>
+            <textarea cols="30" rows="5" placeholder="..." name="description" required></textarea>
+            <input type="submit" value="Post Entry" id="submit">
+        </form>
+    </section>
+</body>
+</html>
