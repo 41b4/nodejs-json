@@ -12,7 +12,6 @@ router.get('/', (req, res, next)=> {
       return result 
   })
   const out=JSON.parse(response)
-  console.log('out-->',out.data)
   res.render('index',{
     info: out.data});
 });
