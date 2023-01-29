@@ -42,6 +42,20 @@ section
     height: 90vh
     overflow: scroll
     overflow-x: hidden
+    .delete
+        input
+            border: 1px solid $black
+            border-radius: 100%
+            padding: .5rem
+            background: none
+            transition: 1s
+            &:hover
+                cursor: pointer
+                border-radius: 0%
+                color: $eggshell
+                border: 1px solid $eggshell
+                background: $black
+
     
     .picture
         height: 30rem
@@ -79,19 +93,8 @@ section
                 width: 100%
                 height: auto
                 object-fit: contain
-        button
-            border: 1px solid $black
-            border-radius: 100%
-            padding: .5rem
-            background: none
-            transition: 1s
-            &:hover
-                cursor: pointer
-                border-radius: 0%
-                color: $eggshell
-                border: 1px solid $eggshell
-                background: $black
-    form
+            
+    .form
         background: $black
         color: $eggshell
         width: 60%

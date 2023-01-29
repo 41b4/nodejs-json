@@ -46,6 +46,20 @@ section {
   overflow: scroll;
   overflow-x: hidden;
 }
+section .delete input {
+  border: 1px solid #000000;
+  border-radius: 100%;
+  padding: 0.5rem;
+  background: none;
+  transition: 1s;
+}
+section .delete input:hover {
+  cursor: pointer;
+  border-radius: 0%;
+  color: #f3efe0;
+  border: 1px solid #f3efe0;
+  background: #000000;
+}
 section .picture {
   height: 30rem;
   width: 20rem;
@@ -89,21 +103,7 @@ section .picture .img img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-section .picture button {
-  border: 1px solid #000000;
-  border-radius: 100%;
-  padding: 0.5rem;
-  background: none;
-  transition: 1s;
-}
-section .picture button:hover {
-  cursor: pointer;
-  border-radius: 0%;
-  color: #f3efe0;
-  border: 1px solid #f3efe0;
-  background: #000000;
-}
-section form {
+section .form {
   background: #000000;
   color: #f3efe0;
   width: 60%;
@@ -114,19 +114,19 @@ section form {
   justify-content: center;
   padding: 2rem 5rem;
 }
-section form h1 {
+section .form h1 {
   font-family: "Bodoni Moda", serif;
   width: 100%;
   text-align: center;
 }
-section form p {
+section .form p {
   width: 100%;
   text-align: left;
 }
-section form textarea {
+section .form textarea {
   resize: none;
 }
-section form input, section form textarea {
+section .form input, section .form textarea {
   width: 100%;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -136,19 +136,19 @@ section form input, section form textarea {
   border: none;
   border-bottom: 1px solid #f3efe0;
 }
-section form input::-moz-placeholder, section form textarea::-moz-placeholder {
+section .form input::-moz-placeholder, section .form textarea::-moz-placeholder {
   color: #5B5541;
   opacity: 1;
 }
-section form input:-ms-input-placeholder, section form textarea:-ms-input-placeholder {
+section .form input:-ms-input-placeholder, section .form textarea:-ms-input-placeholder {
   color: #5B5541;
   opacity: 1;
 }
-section form input::placeholder, section form textarea::placeholder {
+section .form input::placeholder, section .form textarea::placeholder {
   color: #5B5541;
   opacity: 1;
 }
-section form #submit {
+section .form #submit {
   width: auto;
   border: 1px solid #f3efe0;
   color: #f3efe0;
@@ -157,7 +157,7 @@ section form #submit {
   transition: 0.5s;
   margin-top: 1rem;
 }
-section form #submit:hover {
+section .form #submit:hover {
   cursor: pointer;
   background: #f3efe0;
   color: #000000;

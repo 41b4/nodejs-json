@@ -27,7 +27,10 @@
         </div>
         <h1><%= info[i].title %></h1>
         <p><%= info[i].description %></p>
-        <button>Delete</button>
+        <form action="/" method="post" class="delete">
+          <input type="hidden" name="id" value="<%=info[i].id%>">
+          <input type="submit" value="Delete">
+        </form>
       </div>
       
     <%}%>
