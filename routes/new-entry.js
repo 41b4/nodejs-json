@@ -4,12 +4,20 @@ var router = express.Router();
 
 /* render*/
 router.get('/', function(req, res, next) {
-  res.render('newentry')
+  res.render('newentry',{
+    error:''
+  })
   
 });
 
 /* FORM */
 router.post('/',(req, res, next)=>{
+
+  if(req.body.title==''||req.body.image==''||req.body.author==''||req.body.description==''){
+    res.status(400).render('newentry',{
+      error: 'Please fill all spaces'
+    })
+  }else{
   //copy json
   const response = fs.readFileSync('info.json', 'utf8', (error, result) => {
     if(error){
@@ -44,7 +52,9 @@ router.post('/',(req, res, next)=>{
     }
     
   }
-  if (array.length<10){
+
+
+    if (array.length<10){
       const newobj={
         id: '0'+String(array.length),
         title: req.body.title,
@@ -53,18 +63,18 @@ router.post('/',(req, res, next)=>{
         description: req.body.description
     }
     array.push(newobj)
-  }else{
-    const newobj={
-      id: array.length,
-      title: req.body.title,
-      image:req.body.image,
-      author: req.body.author,
-      description: req.body.description
+    }else{
+      const newobj={
+        id: array.length,
+        title: req.body.title,
+        image:req.body.image,
+        author: req.body.author,
+        description: req.body.description
+      }
+      array.push(newobj)
     }
-    array.push(newobj)
-  }
- 
-  const form={}
+
+    const form={}
   form['data']=array
   //console.log(form)
 
@@ -80,5 +90,9 @@ router.post('/',(req, res, next)=>{
   })
   
   res.redirect('/new-entry')
+  }
+  
+ 
+  
 })
 module.exports = router;

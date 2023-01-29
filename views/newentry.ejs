@@ -22,13 +22,14 @@
         <form action="/new-entry" method="POST" class="form">
             <h1>New Picture</h1>
             <p>Title</p>
-            <input type="text" name="title" placeholder="Entry a New Title" required>
+            <input type="text" name="title" placeholder="Entry a New Title">
             <p>Author</p>
-            <input type="text" name="author" placeholder="Author" required>
+            <input type="text" name="author" placeholder="Author">
             <p>Image</p>
-            <input type="text" name="image" placeholder="http://website.com" required>
+            <input type="text" name="image" placeholder="http://website.com">
             <p>Description</p>
-            <textarea cols="30" rows="5" placeholder="..." name="description" required></textarea>
+            <textarea cols="30" rows="5" placeholder="..." name="description"></textarea>
+            <span><%=error%></span>
             <input type="submit" value="Post Entry" id="submit">
         </form>
     </section>

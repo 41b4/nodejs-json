@@ -114,6 +114,10 @@ section .form {
   justify-content: center;
   padding: 2rem 5rem;
 }
+section .form span {
+  color: #F55D3E;
+  font-weight: 700;
+}
 section .form h1 {
   font-family: "Bodoni Moda", serif;
   width: 100%;
