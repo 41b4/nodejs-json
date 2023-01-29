@@ -31,7 +31,7 @@ router.post('/',(req, res, next)=>{
   const out=JSON.parse(response)
   const array=[]
   for (let i=0; i<out.data.length; i++){
-    if(i==deleteID){
+    if(out.data[i].id==deleteID){
       continue
     }else{
       if(i<10){
