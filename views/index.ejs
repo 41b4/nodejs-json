@@ -27,13 +27,28 @@
         </div>
         <h1><%= info[i].title %></h1>
         <p><%= info[i].description %></p>
-        <form action="/" method="post" class="delete">
-          <input type="hidden" name="id" value="<%=info[i].id%>">
-          <input type="submit" value="Delete">
-        </form>
+        <button class="delete"><a onclick="confirmar('<%=info[i].id%>')">Delete</a></button>
       </div>
-      
     <%}%>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+    <script>
+      function confirmar(id) {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          showCancelButton: true,
+          confirmButtonColor: "#5B5541",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire("Deleted!", "Your file has been deleted.");
+            setTimeout(window.location='/delete/'+id, 5000)
+            
+          }
+        });
+      };
+    </script>
   </section>
 </body>
 </html>

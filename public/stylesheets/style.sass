@@ -33,6 +33,10 @@ nav
             a
                 text-decoration: none
                 color: $black
+.swal2-popup 
+    background: $black !important
+    color: $eggshell !important
+    border-radius: 0px!important
 section
     display: flex
     flex-wrap: wrap
@@ -43,18 +47,17 @@ section
     overflow: scroll
     overflow-x: hidden
     .delete
-        input
-            border: 1px solid $black
-            border-radius: 100%
-            padding: .5rem
-            background: none
-            transition: 1s
-            &:hover
-                cursor: pointer
-                border-radius: 0%
-                color: $eggshell
-                border: 1px solid $eggshell
-                background: $black
+        border: 1px solid $black
+        border-radius: 100%
+        padding: .5rem
+        background: none
+        transition: 1s
+        &:hover
+            cursor: pointer
+            border-radius: 0%
+            color: $eggshell
+            border: 1px solid $eggshell
+            background: $black
 
     
     .picture

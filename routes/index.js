@@ -19,8 +19,8 @@ router.get('/', (req, res, next)=> {
 
 /*DELETE*/
 
-router.post('/',(req, res, next)=>{
-  const deleteID=Number(req.body.id)
+router.get('/delete/:id',(req, res, next)=>{
+  const deleteID=Number(req.params.id)
   const response = fs.readFileSync('info.json', 'utf8', (error, result) => {
     if(error){
        console.log(error);

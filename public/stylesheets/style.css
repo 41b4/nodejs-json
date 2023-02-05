@@ -36,6 +36,12 @@ nav ul li a {
   color: #000000;
 }
 
+.swal2-popup {
+  background: #000000 !important;
+  color: #f3efe0 !important;
+  border-radius: 0px !important;
+}
+
 section {
   display: flex;
   flex-wrap: wrap;
@@ -46,14 +52,14 @@ section {
   overflow: scroll;
   overflow-x: hidden;
 }
-section .delete input {
+section .delete {
   border: 1px solid #000000;
   border-radius: 100%;
   padding: 0.5rem;
   background: none;
   transition: 1s;
 }
-section .delete input:hover {
+section .delete:hover {
   cursor: pointer;
   border-radius: 0%;
   color: #f3efe0;
